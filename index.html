@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Parts Landing Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* Top bar styling */
+        .top-bar {
+            background-color: #1c1c1c;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .top-bar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .top-bar nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .top-bar nav ul li {
+            margin: 0 15px;
+        }
+
+        .top-bar nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .top-bar nav ul li a:hover {
+            color: #61dafb;
+        }
+
+        .top-bar .auth-buttons button {
+            background-color: #61dafb;
+            color: #1c1c1c;
+            border: none;
+            padding: 8px 15px;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .top-bar .auth-buttons button:hover {
+            background-color: #41a6d5;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('Images/pexels-pixabay-248539.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin: 15px 0;
+        }
+
+        .hero button {
+            background-color: #61dafb;
+            color: #1c1c1c;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .hero button:hover {
+            background-color: #41a6d5;
+        }
+
+        /* Slideshow Section */
+        .slideshow {
+            display: flex;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            padding: 20px 0;
+            margin: 0 20px;
+        }
+
+        .slideshow-item {
+            flex: 0 0 300px;
+            scroll-snap-align: center;
+            margin: 0 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+
+        .slideshow-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .slideshow-item .content {
+            padding: 15px;
+        }
+
+        .slideshow-item h3 {
+            margin: 0 0 10px;
+            font-size: 1.2rem;
+        }
+
+        .slideshow-item p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        /* About Us Section */
+        .about-us {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #f0f0f0;
+        }
+
+        .about-us h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .about-us p {
+            font-size: 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1c1c1c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="logo">Car Parts Co.</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <a href="sign-in.html"><button>Sign In</button></a>
+            <a href="sign-up.html"><button>Sign Up</button></a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div>
+            <h1>High-Quality Car Parts at Unbeatable Prices</h1>
+            <p>Find the perfect parts for your car. Trusted by thousands of customers nationwide.</p>
+            <button>Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Slideshow Section -->
+    <section class="slideshow" id="shop">
+        <div class="slideshow-item">
+            <img src="Images/pexels-mali-42186.jpg" alt="Engine Parts">
+            <div class="content">
+                <h3>Engine Parts</h3>
+                <p>Top-quality engine components for peak performance.</p>
+            </div>
+        </div>
+        <div class="slideshow-item">
+            <img src="Images/pexels-ivan-kazlouski-234108500-12152939.jpg" alt="Tires">
+            <div class="content">
+                <h3>Tires</h3>
+                <p>Durable tires for every road and every season.</p>
+            </div>
+        </div>
+        <div class="slideshow-item">
+            <img src="Images/pexels-lex-ger-2021617-3642618.jpg" alt="Brakes">
+            <div class="content">
+                <h3>Brakes</h3>
+                <p>Reliable brake systems to keep you safe.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-us" id="about">
+        <h2>About Us</h2>
+        <p>At Car Parts Co., we are committed to providing the best car parts and accessories. With years of experience in the industry, we offer a wide range of products and exceptional customer service. Our goal is to keep your vehicle running smoothly with high-quality parts at affordable prices.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Car Parts Co. All Rights Reserved.
+    </footer>
+</body>
+</html>
